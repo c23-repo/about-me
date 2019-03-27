@@ -1,16 +1,35 @@
 'use strict';
 
+var userInput = " ";
+//Arrays set for the yes/no awnsers, questions and their responses
+var yesResponse = ['yes', 'YES', 'Yes', 'y'];
+var noResponse = ['no','NO', 'No', 'n'];
+var questions= [
+  'Hello, do you want to play a game?',
+  'Do you think that I play baseball?',
+  'Do you think that I am smart?',
+  'Do you think that I am a Marine?',
+  'Is it true that I own 3 dogs?',
+  'Do you think that I am a great cook?',
+  'What is my number in Rugby?',
+  'What countries have I visited?'
+]
+var answers [
+  
+]
 var guessGame = prompt('Hello, do you want to play a game?');
-if(guessGame === 'Yes' || guessGame === 'yes' || guessGame === 'YES'){
-  alert('Cool, let\'s play.');
-  console.log('user answered correctly with yes');
-} else if ( guessGame === 'no' || guessGame === 'No' || guessGame === 'NO'){
-  alert('OK, well, we\'re going to play anyway.');
-  console.log('user chose incorrectly with no');
-} else { 
-  alert('please say YES or NO');
-  console.log('user answered incorrectly');
-  }
+var
+// var guessGame = prompt('Hello, do you want to play a game?');
+// if(guessGame === 'Yes' || guessGame === 'yes' || guessGame === 'YES'){
+//   alert('Cool, let\'s play.');
+//   console.log('user answered correctly with yes');
+// } else if ( guessGame === 'no' || guessGame === 'No' || guessGame === 'NO'){
+//   alert('OK, well, we\'re going to play anyway.');
+//   console.log('user chose incorrectly with no');
+// } else { 
+//   alert('please say YES or NO');
+//   console.log('user answered incorrectly');
+//   }
 
 var mySport = prompt('Do you think that I play baseball?');
   if(mySport === 'No' || mySport === 'no' || mySport === 'NO'){
@@ -60,4 +79,4 @@ var singer = prompt('Do you think I can sing?').toLowerCase();
     console.log('user guessed incorrectly that I could sing');
   }
 
-  //recieved guidance and collaborated with Tim Busch and Chaitanya Narukulla 
+  //recieved guidance and collaborated with Tim Busch, Chaitanya Narukulla, David Marchante
