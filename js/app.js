@@ -4,7 +4,7 @@ var userInput = " ";
 //Arrays set for the yes/no awnsers, questions and their responses
 var yesResponse = ['yes', 'YES', 'Yes', 'y'];
 var noResponse = ['no','NO', 'No', 'n'];
-var questions= [
+var questions = [
   'Hello, do you want to play a game?',
   'Do you think that I play baseball?',
   'Do you think that I am smart?',
@@ -14,11 +14,19 @@ var questions= [
   'What is my number in Rugby?',
   'What countries have I visited?'
 ]
-var answers [
-  
-]
-var guessGame = prompt('Hello, do you want to play a game?');
-var
+console.log(questions)
+var answers = [
+'true',
+'false',
+'true',
+'true',
+'false',
+'true',
+'4',
+['Colombia','Japan']
+];
+console.log(answers)
+
 // var guessGame = prompt('Hello, do you want to play a game?');
 // if(guessGame === 'Yes' || guessGame === 'yes' || guessGame === 'YES'){
 //   alert('Cool, let\'s play.');
