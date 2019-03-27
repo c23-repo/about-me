@@ -59,3 +59,5 @@ var singer = prompt('Do you think I can sing?').toLowerCase();
     alert('Sorry to disappoint you.');
     console.log('user guessed incorrectly that I could sing');
   }
+
+  //recieved guidance and collaborated with Tim Busch and Chaitanya Narukulla 
