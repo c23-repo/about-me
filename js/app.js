@@ -62,11 +62,13 @@ var guesses=0
   var countries = ['colombia','japan', 'afghanistan'];
   
   var score=0;
-  var userInput= prompt('Can you guess what countries I have been to?').toLowerCase();
-      while(userInput !== countries[0, 1, 2] && guesses<limitOconnus){
-        guesses++
-      } if(userInput === countries[0,1,2]){
-        score++
+  var userInput='';
+      while(userInput !== countries && guesses<limitOconnus){
+        userInput= prompt('Can you guess what countries I have been to?').toLowerCase()
+        guesses++;
+        score++;
       }alert('All the possible answers were Colombia, Japan, and Afghanistan. You got ' + score + ' out of 3 countries.');
      console.log( userInput);
-  //recieved guidance and collaborated with Tim Busch, Chaitanya Narukulla, David Marchante
+
+
+//recieved guidance and collaborated with Tim Busch, Chaitanya Narukulla, David Marchante
