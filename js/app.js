@@ -1,90 +1,72 @@
 'use strict';
 
-var userInput = " ";
-//Arrays set for the yes/no awnsers, questions and their responses
-var yesResponse = ['yes', 'YES', 'Yes', 'y'];
-var noResponse = ['no','NO', 'No', 'n'];
-var questions = [
-  'Hello, do you want to play a game?',
-  'Do you think that I play baseball?',
-  'Do you think that I am smart?',
-  'Do you think that I am a Marine?',
-  'Is it true that I own 3 dogs?',
-  'Do you think that I am a great cook?',
-  'What is my number in Rugby?',
-  'What countries have I visited?'
-]
-console.log(questions)
-var answers = [
-'true',
-'false',
-'true',
-'true',
-'false',
-'true',
-'4',
-['Colombia','Japan']
-];
-console.log(answers)
+var userName = prompt('Hello, what is your name?');
+console.log( 'user input name')
 
-// var guessGame = prompt('Hello, do you want to play a game?');
-// if(guessGame === 'Yes' || guessGame === 'yes' || guessGame === 'YES'){
-//   alert('Cool, let\'s play.');
-//   console.log('user answered correctly with yes');
-// } else if ( guessGame === 'no' || guessGame === 'No' || guessGame === 'NO'){
-//   alert('OK, well, we\'re going to play anyway.');
-//   console.log('user chose incorrectly with no');
-// } else { 
-//   alert('please say YES or NO');
-//   console.log('user answered incorrectly');
-//   }
-
-var mySport = prompt('Do you think that I play baseball?');
-  if(mySport === 'No' || mySport === 'no' || mySport === 'NO'){
+var mySport = prompt(userName+', do you think that I play baseball?').toLowerCase();
+  if(mySport === 'n' || mySport === 'no'){
     alert('You are correct');
     console.log('user answered correctly with no');
   } else if ( mySport === 'yes' || mySport === 'Yes' || mySport === 'YES'){
-    alert('Sorry, but that\'s incorrect');
+    alert('You are incorrect');
     console.log('user chose incorrectly with yes');
   } else{ 
     alert('please say YES or NO');
     console.log('user answered incorrectly');
     }
 
-var smart = prompt('Do you think that I\'m smart?').toUpperCase();
-  if(smart === 'YES' || smart === 'Y'){
-    alert('OH, why thank you. You are very perceptive');
+var car = prompt(userName+', do you think that I own a car?').toUpperCase();
+  if(car === 'NO' || car === 'N'){
+    alert('You are correct');
     console.log('user answered correctly');
   } else{
-    alert("Really? it\'s like that.");
+    alert("You are incorrect.");
     console.log('user answered incorrectly');
   }
 
-var marine = prompt(' Do you think that I am a Marine?').toLowerCase();
+var marine = prompt(userName+', do you think that I am a Marine?').toLowerCase();
   if(marine === 'yes' || marine === 'y'){
-    alert('Is that why you guessed I wasn\'t smart?');
+    alert('You are correct');
     console.log('user guessed right');
   } else{
-    alert('sorry, you are the weakest link');
+    alert('You are incorrect.');
     console.log('user guessed wrong');
   }
 
-var dogs = prompt('Do you think that I own dogs?').toLowerCase();
+var dogs = prompt(userName+', do you think that I own dogs?').toLowerCase();
   if(dogs === 'yes' || dogs ==='y'){
-    alert('I do have dogs!');
+    alert('You are correct');
     console.log('user guessed correctly that I have dogs')
-  } else{
-    alert('sorry, I have two dogs');
+  } else if(dogs === 'no' || dogs === 'n'){
+    alert('You are incorrect.');
     console.log('user guessed incorrectly that I had no dogs')
-  }
+  } else 
 
-var singer = prompt('Do you think I can sing?').toLowerCase();
-  if(singer === 'no' || singer === 'n'){
-    alert('Yeah, I can\'t sing at all.');
+var cook = prompt(userName+', do you think I can cook?').toLowerCase();
+  if(cook === 'yes' || cook === 'y'){
+    alert('You are correct');
     console.log('user guessed correctly that I can not sing');
   } else {
-    alert('Sorry to disappoint you.');
+    alert('You are incorrect.');
     console.log('user guessed incorrectly that I could sing');
   }
+var jerseyNum = '';
+var limit=3;
+var guesses=0
+  while(jerseyNum !== '4' && guesses<limit){
+    jerseyNum=prompt('Can you guess my Jersey number in rugby?');
+    guesses++;
+  } console.log('user guessed jersey number');
 
+  var limitOconnus=6
+  var countries = ['colombia','japan', 'afghanistan'];
+  
+  var score=0;
+  var userInput= prompt('Can you guess what countries I have been to?').toLowerCase();
+      while(userInput !== countries[0, 1, 2] && guesses<limitOconnus){
+        guesses++
+      } if(userInput === countries[0,1,2]){
+        score++
+      }alert('All the possible answers were Colombia, Japan, and Afghanistan. You got ' + score + ' out of 3 countries.');
+     console.log( userInput);
   //recieved guidance and collaborated with Tim Busch, Chaitanya Narukulla, David Marchante
