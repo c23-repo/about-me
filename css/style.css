@@ -2,3 +2,12 @@
 font-style: italic;
 padding-bottom: 25px;
 }
+
+html {
+  background-color:rgba(137, 223, 137, 0.747);
+}
+
+.major {
+  align-content: center;
+  
+}
