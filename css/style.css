@@ -8,6 +8,7 @@ html {
 }
 
 .major {
-  align-content: center;
-  
+  text-align: center;
+  background-color: #f7a223c2;
+
 }

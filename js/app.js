@@ -58,4 +58,4 @@ var guesses=0
 
    
 
-//recieved guidance and collaborated with Tim Busch, Chaitanya Narukulla, David Marchante
+//recieved guidance and collaborated with Paula Thomas, Tim Busch, Chaitanya Narukulla, David Marchante
