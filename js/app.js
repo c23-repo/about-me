@@ -3,7 +3,7 @@
 // Array bank for questions, answers, and responses
 var yesResponseArray = ['yes', 'y', 'true', 't'];
 var noResponseArray = ['no', 'n', 'false', 'f'];
-var answersArray = [false, false, true, false, true, '4', countriesArray];
+var answersArray = [false, false, true, true, true, '4', countriesArray];
 var countriesArray = ['colombia', 'japan', 'afghanistan'];
 var questionsArray = [', do you think that I play baseball?', ', do you think that I own a car?', ', do you think that I am a Marine?', ', do you think that I own dogs?', ', do you think I can cook?', ' Can you guess my Jersey number in rugby? (you only get 3 guesses)', 'Can you guess what countries I have been to?'];
 var userAnswer= [];
@@ -33,21 +33,20 @@ for (var i = 0; i < questionsArray.length; i++) {
       guesses++;
     } console.log(guesses);
     if(userAnswer[5] === answersArray[5]){
-      alert( 'You are correct!');
       correctAmnt++;
     } else{
-      console.log('user answered incorrectly');
+      console.log(userAnswer[5]);
     }
     // Guess which country
   } else if( questionsArray[i] === questionsArray[6]){
     while(!countriesArray.includes(userAnswer[6].toString().toLowerCase()) && oconnusGuess < limitOconnus){
       userAnswer[6] = prompt('Incorrect, choose another country. You have ' + (limitOconnus - oconnusGuess) + ' guesses left.');
+      oconnusGuess++;
     }
     if(countriesArray.includes(userAnswer[6].toString().toLowerCase())){
-      alert('You are correct');
       correctAmnt++;
     } else{
-      console.log('wrong answer');
+      console.log(userAnswer[6]);
     }
   }
   if(answersArray[i] === checkAnswer(userAnswer[i])){
@@ -57,7 +56,7 @@ for (var i = 0; i < questionsArray.length; i++) {
     alert('You are incorrect.');
   }
 }
-alert('You got ' + correctAmnt + ' out of ' + questionsArray.length + 'questions. Thank you for playing.');
+alert('You got ' + correctAmnt + ' out of ' + questionsArray.length + ' questions. Thank you for playing.');
 
 // check answers from the arrays
 function checkAnswer(userAnswer) {
@@ -69,8 +68,8 @@ function checkAnswer(userAnswer) {
     return false;
   } else {
     console.log('Unrecognized');
-    return userAnswer;
   }
+  return userAnswer;
 }
 // helps the user guess number
 function hotCold(userAnswer){

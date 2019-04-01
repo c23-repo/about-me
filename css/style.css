@@ -10,5 +10,10 @@ html {
 .major {
   text-align: center;
   background-color: #f7a223c2;
+  box-shadow: 10px, 10, 15px, black;
+}
 
+.experience {
+  background-color: lightgrey;
+  padding: 5px;
 }

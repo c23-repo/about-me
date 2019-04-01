@@ -50,3 +50,6 @@ Cristian Restrepo
 - user stories and featured task obtained from Code Fellows code 201 lab assignment. 
 
 - W3Schools, stack overflow for informaiton on functions, arrays, and loops.
+
+## License
+-  This project is licensed under the MIT License - see the LICENSE.md file for details
