@@ -29,18 +29,6 @@ Cristian Restrepo
 - As a developer, I want to add a seventh question to my guessing game that has multiple possible correct answers that are stored in an array (for instance, “Can you guess a state that I have lived in besides Washington?”), so that even more of my programming skills are showcased. For now, I will structure this question so that the user has six tries to get a single correct answer, and upon using up those tries OR getting a correct answer, displays a message to the user indicating all of the possible correct answers.
 - As a developer, I want to keep a tally of the total number of correct answers given by the user, and at the end of the game, tell the user how well they did with a personalized custom message that includes the number of correct answers and also addresses the user by name, e.g. “You got 4 out of 7 questions correct, Bobbi! Better luck next time.”
 
-
-## Feature Tasks
-
-- HTML, CSS, and JavaScript must be cleanly written with correct indentation and syntax. Look at examples online and in your textbook. Note that your JS must pass the rules in the linter that we installed.
-- Your JS file must contain a ‘use strict’ declaration at the top. Always.
-- Design a guessing game about you that involves FIVE yes/no questions. Be creative and fun and whimsical. Or not. It’s up to you! It’s your project!
-
-- Per the user stories, you will need to include in your HTML at least one each of an ordered and an unordered list.
-- Use promptfor input and alert for output to the user, unless you are working on the third Stretch Goal.
-- Do not write any functions in your JavaScript.
--Expect that you will probably need both ‘for’ and ‘while’ structures for your sixth and seventh questions. But not necessarily.
-
 ## Acknowledgments
 
 - This code was refactored through pair programming with Paula Thomas as the Driver and Cristian Restrepo acting as Navigator. 
