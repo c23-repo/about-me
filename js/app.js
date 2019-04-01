@@ -7,9 +7,7 @@ var answersArray = [false, false, true, false, true, '4', countriesArray];
 var countriesArray = ['colombia', 'japan', 'afghanistan'];
 var questionsArray = [', do you think that I play baseball?', ', do you think that I own a car?', ', do you think that I am a Marine?', ', do you think that I own dogs?', ', do you think I can cook?', ' Can you guess my Jersey number in rugby? (you only get 3 guesses)', 'Can you guess what countries I have been to?'];
 var userAnswer= [];
-var questionsTracker = 0;
 var correctAmnt = 0;
-var incorrectAmnt = 0;
 
 
 var userName = prompt('Hello, what is your name?');
@@ -38,21 +36,18 @@ for (var i = 0; i < questionsArray.length; i++) {
       alert( 'You are correct!');
       correctAmnt++;
     } else{
-      incorrectAmnt++;
+      console.log('user answered incorrectly');
     }
     // Guess which country
   } else if( questionsArray[i] === questionsArray[6]){
-    // New variable for country input
-    // var countryAnswer= prompt(questionsArray[6]);
-
     while(!countriesArray.includes(userAnswer[6].toString().toLowerCase()) && oconnusGuess < limitOconnus){
-      userAnswer[6] = prompt('Incorrect, choose another country. You have' + (limitOconnus - oconnusGuess) + ' guesses left.');
+      userAnswer[6] = prompt('Incorrect, choose another country. You have ' + (limitOconnus - oconnusGuess) + ' guesses left.');
     }
     if(countriesArray.includes(userAnswer[6].toString().toLowerCase())){
       alert('You are correct');
       correctAmnt++;
     } else{
-      incorrectAmnt++;
+      console.log('wrong answer');
     }
   }
   if(answersArray[i] === checkAnswer(userAnswer[i])){
@@ -60,9 +55,10 @@ for (var i = 0; i < questionsArray.length; i++) {
     correctAmnt++;
   }else{
     alert('You are incorrect.');
-    incorrectAmnt++;
   }
 }
+alert('You got ' + correctAmnt + ' out of ' + questionsArray.length + 'questions. Thank you for playing.');
+
 // check answers from the arrays
 function checkAnswer(userAnswer) {
   if (yesResponseArray.includes(userAnswer.toLowerCase())) {
@@ -85,18 +81,5 @@ function hotCold(userAnswer){
   }
   return userAnswer;
 }
-
-/*var limitOconnus = 6;
-var countries = ['colombia', 'japan', 'afghanistan'];
-
-var score = 0;
-var userInput = '';
-while (userInput !== countries && guesses < limitOconnus) {
-  userInput = prompt(questionsArray[6]).toLowerCase();
-  guesses++;
-  score++;
-} alert('All the possible answers were Colombia, Japan, and Afghanistan. You got ' + score + ' out of 3 countries.');
-console.log(userInput);*/
-
 
 /*recieved guidance and/or collaborated with Paula Thomas, Tim Busch, Chaitanya Narukulla, David Marchante, Liz Mahoney.*/
