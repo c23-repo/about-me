@@ -11,20 +11,6 @@ var questionsTracker = 0;
 var correctAmnt = 0;
 var incorrectAmnt = 0;
 
-function checkAnswer(userAnswer) {
-  if (yesResponseArray.includes(userAnswer.toLowerCase())) {
-    console.log('Input equates to true');
-    return true;
-  } else if (noResponseArray.includes(userAnswer.toLowerCase())) {
-    console.log('Input equates to false');
-    return false;
-  } else {
-    console.log('Unrecognized');
-    return userAnswer;
-  }
-}
-
-
 
 var userName = prompt('Hello, what is your name?');
 console.log('user input name');
@@ -42,41 +28,65 @@ for (var i = 0; i < questionsArray.length; i++) {
 
   //Guess Jersey number
   if(questionsArray[i] === questionsArray[5]){
-    // new variable since not reading the array index properly
-    var question5 = 4;
-    var userNumber = '';
 
     // Help the user with to high/low and check if correct
-    while(userNumber.toString() !== question5.toString() && guesses < limit){
-      userNumber = prompt('Sorry ' + hotCold(userNumber) + ', you have ' + (limit - guesses) + ' guesses left');
+    while(userAnswer[5] !== answersArray[5] && guesses < limit){
+      userAnswer[5] = prompt(hotCold(userAnswer[5]) + 'is incorrect, you have ' + (limit - guesses) + ' guesses left');
       guesses++;
     } console.log(guesses);
-    if(userNumber.toString() === question5.toString()){
+    if(userAnswer[5] === answersArray[5]){
       alert( 'You are correct!');
       correctAmnt++;
     } else{
       incorrectAmnt++;
     }
     // Guess which country
-  } /*else if( questionsArray[i] === questionsArray[6]){
+  } else if( questionsArray[i] === questionsArray[6]){
+    // New variable for country input
+    // var countryAnswer= prompt(questionsArray[6]);
 
-      while(userAnswer !== questionsArray[6] && oconnusGuess < limitOconnus){
-
-      }*/
+    while(!countriesArray.includes(userAnswer[6].toString().toLowerCase()) && oconnusGuess < limitOconnus){
+      userAnswer[6] = prompt('Incorrect, choose another country. You have' + (limitOconnus - oconnusGuess) + ' guesses left.');
+    }
+    if(countriesArray.includes(userAnswer[6].toString().toLowerCase())){
+      alert('You are correct');
+      correctAmnt++;
+    } else{
+      incorrectAmnt++;
+    }
+  }
+  if(answersArray[i] === checkAnswer(userAnswer[i])){
+    alert('You are correct!');
+    correctAmnt++;
+  }else{
+    alert('You are incorrect.');
+    incorrectAmnt++;
+  }
 }
-
-
-
-function hotCold(userNumber){
-  if(userNumber < 4){
+// check answers from the arrays
+function checkAnswer(userAnswer) {
+  if (yesResponseArray.includes(userAnswer.toLowerCase())) {
+    console.log('Input equates to true');
+    return true;
+  } else if (noResponseArray.includes(userAnswer.toLowerCase())) {
+    console.log('Input equates to false');
+    return false;
+  } else {
+    console.log('Unrecognized');
+    return userAnswer;
+  }
+}
+// helps the user guess number
+function hotCold(userAnswer){
+  if(userAnswer < 4){
     alert('number is to low');
-  } else if(userNumber > 4){
+  } else if(userAnswer > 4){
     alert('number is to high');
   }
-  return userNumber;
+  return userAnswer;
 }
-/*
-var limitOconnus = 6;
+
+/*var limitOconnus = 6;
 var countries = ['colombia', 'japan', 'afghanistan'];
 
 var score = 0;
@@ -86,7 +96,7 @@ while (userInput !== countries && guesses < limitOconnus) {
   guesses++;
   score++;
 } alert('All the possible answers were Colombia, Japan, and Afghanistan. You got ' + score + ' out of 3 countries.');
-console.log(userInput);
+console.log(userInput);*/
 
 
-//recieved guidance and/or collaborated with Paula Thomas, Tim Busch, Chaitanya Narukulla, David Marchante, Liz Mahoney*/
+/*recieved guidance and/or collaborated with Paula Thomas, Tim Busch, Chaitanya Narukulla, David Marchante, Liz Mahoney.*/
